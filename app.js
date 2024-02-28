@@ -4,14 +4,8 @@ const uploadRoutes = require('./routes/uploadRoutes');
 const downloadRoutes = require('./routes/downloadRoutes');
 require('./config/firebaseConfig');
 const app = express();
-const fs = require('fs');
 dotenv.config();
-
-const directory = './downloads/';
-
-if (!fs.existsSync(directory)) {
-    fs.mkdirSync(directory);
-}
+require('./utils/fileExistence');
 
 // Use routes
 app.use('/upload', uploadRoutes);
