@@ -1,5 +1,6 @@
 const storageService = require('../services/storageService');
 const errorHandler = require('../utils/errorHandler');
+const fs = require('fs');
 
 const downloadController = async (req, res) => {
     try {
@@ -21,10 +22,10 @@ const downloadController = async (req, res) => {
         });
 
         writeStream.on('error', (error) => {
-            errorHandler(res, 500, 'Error Downloading File');
+            errorHandler(res, 500, error.message || 'Error Downloading File');
         });
     } catch (error) {
-        errorHandler(res, 500, 'Error Downloading File');
+        errorHandler(res, 500, error.message || 'Error Downloading File');
     }
 };
 
