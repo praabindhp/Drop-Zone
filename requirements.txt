@@ -1,0 +1,4 @@
+express
+firebase
+firebase-admin
+body-parser

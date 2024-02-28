@@ -1,0 +1,25 @@
+project-root/
+|-- src/
+|   |-- controllers/
+|   |   |-- uploadController.js
+|   |   |-- downloadController.js
+|
+|-- services/
+|   |-- storageService.js
+|
+|-- middleware/
+|   |-- multerMiddleware.js
+|
+|-- routes/
+|   |-- uploadRoutes.js
+|   |-- downloadRoutes.js
+|
+|-- utils/
+|   |-- errorHandler.js
+|
+|-- config/
+|   |-- firebaseConfig.js
+|
+|-- app.js
+|-- .env
+|-- package.json
